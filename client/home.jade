@@ -1,0 +1,14 @@
+template(name="home")
+  .container
+    .row
+      .col-md-12
+        h1 Checkout
+        p Both fields should validate when the other is modified.
+      
+      +autoForm schema="CheckoutSchema" validation="keyup" autosave=true
+        .col-md-2
+          +afQuickField name="cardMonth"
+        .col-md-2
+          +afQuickField name="cardYear"
+        .col-md-12
+          button.btn.btn-primary(type="submit") Submit
